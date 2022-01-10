@@ -1,4 +1,4 @@
-# Welcome to the quiz game
-## This quiz is about the famous tv show BEN-10.
+# Welcome!! these are some easy programs for begginers..
+## this includes a QUIZE, GUESSING_GAME
  Best of luck.
 
