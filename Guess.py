@@ -25,6 +25,8 @@ while True:
         continue
     if gess == numbers:
         print("you got it. :)")
+        print("you got in: ")
+        print(guess)
         break
     elif gess > numbers:
         print("LESS")
