@@ -1,5 +1,6 @@
 # this is a program to guess the right number in teh lesast amount of time
 # hey
+from cgi import print_directory
 import random
 
 num = input("please type the max number you want: ")

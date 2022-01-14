@@ -3,52 +3,45 @@ import random
 import time
 
 point = 0
-chace = 1
-
-print("use the folling commands as - \n rock:R \n papper:P \n scissors:S")
-options = "rock" "papper" "scissors"
-
-play = int(input("please enter the number of rounds you want to play: "))
-while chace < play:
-    first = input("enter you thing: ").lower
-    #    if first != "r" or "s" or "p":
-    #        print("enter r, p or s.")
-    #        break
-    #    else:
-    #        continue
-    #  print("you chose: " + first)
-    comp = options[random.randint(0, 3)]
+options = ["rock", "paper", "scissors"]
+print("options: rock, paper, scissors")
+b = True
+while True:
+    first = (input("enter you thing: ")).lower()
+    comp = random.choice(options)
     print("computer chose: ")
-    time.sleep(2)
-    print(comp)
-    chace += 1
-
+    time.sleep(0.2)
+    print((comp).upper())
     if first == comp:
         print("oh! it was the same")
-        chace -= 1
-    elif first == "scissors" and comp == "paper":
-        print("Nice!!")
-        point += 1
 
-    elif first == "paper" and comp == "rock":
-        print("Nice!!")
-        point += 1
+    elif first == "rock":
+        if comp == "paper":
+            print("paper wins!")
+            point -= 1
+        else:
+            print("u won")
+            point += 1
 
-    elif first == "rock" and comp == "scissors":
-        print("Nice!!")
-        point += 1
+    elif first == "paper":
+        if comp == "scissors":
+            print("scissors wins!")
+            point -= 1
+        else:
+            print("u won!")
 
-    elif first == "scissors" and comp == "rock":
-        print("oh!!")
+            point += 1
+    elif first == "scissors":
+        if comp == "rock":
+            print("rock wins!")
 
-    elif first == "rock" and comp == "papper":
-        print("oh!!")
+            point -= 1
+        else:
+            print("u won!")
 
-    else:
-        print("oh!!")
-
-point = int(point)
-if point == play / 2:
-    print("congratulations!! u won!!")
-else:
-    print("sigh...try to be better plz")
+            point += 1
+    a = input("do you want to play again(y/n)")
+    if a.lower() == "n":
+        break
+points = str(point)
+print("YOUR SCORE WAS: " + points)

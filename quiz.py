@@ -127,7 +127,7 @@ if id.lower() == "satvik":
             print("you have been denied all plumber privileges")
             print("you will be escorted out of the system now.")
 else:
-    if points > 2llasdj lksdafj 
+    if points > 3:
         print("congratulation! you are now a plumer.\n GOOD JOB PLUMER")
     else:
         if points < 2:
