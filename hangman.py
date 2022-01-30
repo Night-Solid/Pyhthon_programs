@@ -17,14 +17,19 @@ def hangman():
     word_letter = set(word)
     alphabet = set(string.ascii_uppercase)
     used = set()
-    live = 7
+    live = 10
     while len(word_letter) > 0 and live > 0:
         # gitting the input
         # letters used by the player.
         word_list = [letter if letter in used else "-" for letter in word]
         print("the right letters guessed are: ", " ".join(word_list))
-        print("you have ", live, " left!! \n these letters has been used by u: \
-                ", " ".join(used))
+        print(
+            "you have ",
+            live,
+            " left!! \nthese letters has been used by u: \
+                ",
+            " ".join(used),
+        )
         print(lives_visual_dict[live])
         guess = input("enter a letter: ").upper()
         if guess in alphabet - used:
@@ -40,8 +45,10 @@ def hangman():
             print("not a valid character.")
     if live == 0:
         print(lives_visual_dict[0])
-        print('You died, sorry. The word was', word)
+        print("YOU DIED, sorry. The word was", word)
     else:
-        print("you won!!")    
+        print("the word is:", word)
+        print("YOU WON!!")
+
 
 hangman()
